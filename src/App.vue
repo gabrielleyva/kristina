@@ -5,78 +5,65 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <div>
       <nav>
         <div class="initials">Kristina Ayanian</div>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/myStory">My Story</RouterLink>
+        <RouterLink to="/myStory">Press</RouterLink>
         <RouterLink to="/gallery">Gallery</RouterLink>
         <RouterLink to="/philanthropy">Philanthropy</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
       </nav>
-    </div>
   </header>
 
   <body>
     <RouterView />
+    <footer>
+        <div>
+          <div class="footer-item">Kristina Ayanian © 2022 Copyright</div>
+          <div class="footer-item">•</div>
+          <div class="footer-item"> Made with love ❤️ </div>
+        </div>
+    </footer>
   </body>
-  <footer>
-    <div>
-      <nav>
-        <div class="footer-item">Kristina Ayanian © 2022 Copyright</div>
-        <RouterLink to="/contact">Contact</RouterLink>
-        <div class="footer-item"> Made with love ❤️ </div>
-      </nav>
-    </div>
-  </footer>
 </template>
 
 <style scoped>
+/**
+Header Styles
+*/
+header nav {
+  padding: 16px;
+  font-size: 12px;
+  text-align: left;
+  background-color: transparent;
+  background-color: var(--header-background-color);
+}
+
+header nav a {
+  padding: 0 16px;
+  border-left: 1px solid var(--divider-color);
+}
+
+/**
+Footer Styles
+*/
+footer {
+  padding: 8px;
+}
+
 .initials {
   display: inline;
-  padding: 0 1rem;
+  padding: 0 8px;
   font-family: santorini;
   font-weight: bolder;
 }
 
-header nav {
-  width: 100%;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  font-size: 12px;
-  text-align: left;
-}
-
-header nav a {
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: block;
-    place-items: center;
-  }
-}
-
-footer {
-  width: 100%;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  font-size: 12px;
-  text-align: center;
-}
-
-footer nav a {
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-}
-
 .footer-item {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 4px;
   font-size: 12px;
-  color: #898889;
+  color: var( --footer-text-color);
 }
+
 </style>

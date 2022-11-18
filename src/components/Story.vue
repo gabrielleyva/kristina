@@ -51,11 +51,11 @@ export default {
 }
 
 .paragraph:nth-child(odd) {
-    background-color: white;
+    background-color: var(--main-background-color);
 }
 
 .paragraph:nth-child(even) {
-    background-color: #E5E4E2;
+    background-color: var(--tile-background-color);
 }
 
 .paragraph img {
