@@ -10,24 +10,29 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/gallery',
-      name: 'gallery',
-      component: () => import('../views/GalleryView.vue')
-    },
-    {
-      path: '/philanthropy',
-      name: 'philanthropy',
-      component: () => import('../views/AboutView.vue')
-    },
-    {
       path: '/myStory',
-      name: 'myStory',
+      name: 'My Story',
       component: () => import('../views/MyStoryView.vue')
     },
     {
+      path: '/gallery',
+      name: 'The Gallery',
+      component: () => import('../views/GalleryView.vue')
+    },
+    {
+      path: '/press',
+      name: 'Prress',
+      component: () => import('../views/PressView.vue')
+    },
+    {
+      path: '/philanthropy',
+      name: 'Philanthropy',
+      component: () => import('../views/PhilanthropyView.vue')
+    },
+    {
       path: '/contact',
-      name: 'contact',
-      component: () => import('../views/AboutView.vue')
+      name: 'ontact',
+      component: () => import('../views/ContactView.vue')
     }
   ]
 })
