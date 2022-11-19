@@ -1,12 +1,14 @@
 
 <script>
 import Story from '../components/Story.vue'
+import Title from '../components/Title.vue'
 import stories from '../assets/story.json';
 
 export default {
   name: 'MyStory',
   components: {
-    Story
+    Story,
+    Title
   },
   data() {
     return {
@@ -18,11 +20,7 @@ export default {
 
 <template>
   <div class="appear my-story">
-    <div class="story-title-container">
-      <h2>
-        My Story
-      </h2>
-    </div>
+    <Title title="My Story"></Title>
     <div class="stories-container">
       <div class="main-story-container" v-for="story, index in stories" :key="story">
         <Story :story="story" :index="index"></Story>
@@ -40,10 +38,6 @@ export default {
   display: inline-block;
   margin: 0 auto;
   height: 100%;
-}
-
-.story-title-container {
-  padding: 8px;
 }
 
 .stories-container {

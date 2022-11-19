@@ -9,17 +9,13 @@ for (let i = 1; i <= 12; i++) {
 
 export default {
   name: 'Gallery',
-  data() {
-    return {
-      photos: photos,
-    };
-  },
+  props: ['photo'],
   methods: {
     moveMouse(event) {
-        const x = event.x
-        const y = event.y
-        const div = event.target
-        update(x, y, div)
+      const x = event.x
+      const y = event.y
+      const div = event.target
+      update(x, y, div)
     }
   }
 };
@@ -37,51 +33,22 @@ const update = (x, y, div) => {
 </script>
 
 <template>
-    <div class="gallery">
-      <div class="gallery-panel"
-           v-for="photo in photos"
-           :key="photo">
-           <div ref="myDiv" @mouseover="moveMouse" @mousemove="moveMouse" class="card">
-                <img :src="`/${photo}.JPG`">
-           </div>
-      </div>
-    </div>
+  <div ref="myDiv" @mouseover="moveMouse" @mousemove="moveMouse" class="gallery-card">
+    <img :src="`/${photo}.JPG`">
+  </div>
 </template>
 
 <style>
-
-
-.gallery {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-grid-gap: 1rem;
-max-width: 1024px;
-margin: 1rem auto;
-padding: 0 1rem;
-align-items: center;
-}
-
-.gallery-panel img {
-align-self: center;
-width: 100%;
-object-fit: cover;
-height: 100%;
-scale: 1.2;
-translate: 0 0;
-}
-
-
-.card:not(:hover) img {
+.gallery-card:not(:hover) img {
   transition: translate 1s;
 }
 
-.card:hover img {
+.gallery-card:hover img {
   translate:
-    calc((var(--ratio-x) - 0.5) * 20%)
-    calc((var(--ratio-y) - 0.5) * 20%);
+    calc((var(--ratio-x) - 0.5) * 20%) calc((var(--ratio-y) - 0.5) * 20%);
 }
 
-.card {
+.gallery-card {
   overflow: hidden;
   width: 280px;
   height: 280px;
@@ -90,18 +57,17 @@ translate: 0 0;
   touch-action: none;
 }
 
-.card:hover {
+.gallery-card:hover {
   transform:
-    rotateX(calc((var(--ratio-y) - 0.5) * 50deg))
-    rotateY(calc((var(--ratio-x) - 0.5) * -40deg));
+    rotateX(calc((var(--ratio-y) - 0.5) * 50deg)) rotateY(calc((var(--ratio-x) - 0.5) * -40deg));
 }
 
-.card:not(:hover) {
+.gallery-card:not(:hover) {
   transform: rotateX(0deg) rotateY(0deg);
   transition: transform 0.2s;
 }
 
-.card:after {
+.gallery-card:after {
   content: "";
   position: absolute;
   inset: 0;
@@ -111,16 +77,14 @@ translate: 0 0;
   z-index: 2;
 }
 
-.card:before {
+.gallery-card:before {
   content: "";
   background:
-   linear-gradient(115deg,
-     transparent 20%,
-     #E5E4E2 30%,
-     transparent 48% 52%,
-     transparent
-   )
-   80% 80% / 300% 300%;
+    linear-gradient(115deg,
+      transparent 20%,
+      #E5E4E2 30%,
+      transparent 48% 52%,
+      transparent) 80% 80% / 300% 300%;
   filter: brightness(2) contrast(1);
   background-blend-mode: overlay;
   mix-blend-mode: color-dodge;
@@ -131,11 +95,10 @@ translate: 0 0;
   transition: opacity 0.2s;
 }
 
-.card:hover:before {
+.gallery-card:hover:before {
   background-position:
     calc(var(--ratio-x) * 10%) calc(var(--ratio-y) * 10%),
     calc(80% + (var(--ratio-x) * -50%)) calc(80% + (var(--ratio-y) * -50%));
   opacity: 1;
 }
-
 </style>

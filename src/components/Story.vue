@@ -1,6 +1,5 @@
 
 <script>
-import stories from '../assets/story.json';
 
 export default {
     name: 'Story',
@@ -25,7 +24,6 @@ export default {
 </template>
 
 <style>
-
 .story {
     display: flex;
     text-align: left;
