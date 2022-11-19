@@ -33,12 +33,6 @@ export default {
     margin-bottom: 32px;
 }
 
-.story img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
 .story-info {
     flex-grow: 1;
     padding: 8px;
@@ -46,6 +40,14 @@ export default {
 
 .story-image-container {
     flex-grow: 1;
+    min-width: 300px;
     overflow: hidden;
 }
+
+.story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 </style>
