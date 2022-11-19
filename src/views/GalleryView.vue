@@ -67,6 +67,6 @@ export default {
 
 .grid-item {
   flex-grow: 1;
-  border: 10px solid white;
+  border: 10px solid var(--gallery-border-color);
 }
 </style>

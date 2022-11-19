@@ -55,6 +55,7 @@ Main Root Configs
   Border Color Definiations
   */
   --main-border-color: var(--platinum);
+  --gallery-border-color: var(--platinum);
 
   /**
   Container Dimensions Declarations
@@ -112,9 +113,10 @@ Main Root Dark Mode Configs
     --cover-image-background-color: var(--midnight);
 
     /**
-  Border Color Definiations
+  Dark Border Color Definiations
   */
     --main-border-color: var(--pastel-green);
+    --gallery-border-color: white;
   }
 }
 
