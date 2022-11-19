@@ -1,5 +1,5 @@
 <script>
-import Gallery from '../components/Gallery.vue'
+import GalleryCard from '../components/GalleryCard.vue'
 import Title from '../components/Title.vue'
 
 const photos = []
@@ -10,9 +10,9 @@ for (let i = 1; i <= 12; i++) {
 }
 
 export default {
-  name: 'home',
+  name: 'Gallery',
   components: {
-    Gallery,
+    GalleryCard,
     Title
   },
   data() {
@@ -27,8 +27,8 @@ export default {
   <div class="gallery appear">
     <Title title="The Gallery"></Title>
     <div class="gallery-grid-container">
-      <div class="gallery-panel" v-for="photo in photos" :key="photo">
-        <Gallery :photo="photo"></Gallery>
+      <div class="grid-col" v-for="photo in photos" :key="photo">
+        <GalleryCard class="grid-item" :photo="photo"></GalleryCard>
       </div>
     </div>
   </div>
@@ -43,24 +43,30 @@ export default {
   display: inline-block;
   margin: 0 auto;
   height: 100%;
+  margin-bottom: 32px;
 }
 
 .gallery-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-gap: 1rem;
-  max-width: 1024px;
-  margin: 1rem auto;
-  padding: 0 1rem;
-  align-items: center;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
-.gallery-panel img {
+.grid-col {
+  display: flex;
+  flex: 1;
   align-self: center;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-  scale: 1.2;
-  translate: 0 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item {
+  flex-grow: 1;
+  border: 10px solid white;
 }
 </style>

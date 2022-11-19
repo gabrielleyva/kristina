@@ -54,7 +54,18 @@ Main Root Configs
   /**
   Border Color Definiations
   */
-  --main-border-color: var(--platinum)
+  --main-border-color: var(--platinum);
+
+  /**
+  Container Dimensions Declarations
+  */
+  --width: 1024px;
+
+  /**
+  Padding Declarations
+  */
+  --grid-padding: 16px;
+  --grid-width: 320px;
 }
 
 /**
@@ -62,48 +73,48 @@ Main Root Dark Mode Configs
 */
 @media (prefers-color-scheme: dark) {
   :root {
-  /**
+    /**
   Dark Text Color Definitions
   */
-  --h1-color: white;
-  --h2-color: var(--pastel-green);
-  --p-color: white;
-  --a-color: white;
-  --footer-text-color: white;
+    --h1-color: white;
+    --h2-color: var(--pastel-green);
+    --p-color: white;
+    --a-color: white;
+    --footer-text-color: white;
 
-  /**
+    /**
   Dark Background Color Definitions 
   */
-  --main-background-color: black;
-  --tile-background-color: var(--midnight);
-  --footer-background-color: var(--midnight);
-  --header-background-color: var(--midnight);
+    --main-background-color: black;
+    --tile-background-color: var(--midnight);
+    --footer-background-color: var(--midnight);
+    --header-background-color: var(--midnight);
 
-  /**
+    /**
   Divider Color Definitions
   */
-  --divider-color: white;
+    --divider-color: white;
 
-  /**
+    /**
   Dark Hyperlink Color Deinition
   */
-  --link-color: white;
-  --link-visited-color: var(--light-gray);
-  --link-hover-color: var(--pastel-green);
+    --link-color: white;
+    --link-visited-color: var(--light-gray);
+    --link-hover-color: var(--pastel-green);
 
-  /**
+    /**
   Dark Image URL Definitions
   */
-  --cover-image: url(./img/header-dark.png);
-  --cover-imgae-position: bottom left;
-  --cover-image-size: 60%;
-  --cover-image-margin-left: 40%;
-  --cover-image-background-color: var(--midnight);
+    --cover-image: url(./img/header-dark.png);
+    --cover-imgae-position: bottom left;
+    --cover-image-size: 60%;
+    --cover-image-margin-left: 40%;
+    --cover-image-background-color: var(--midnight);
 
-  /**
+    /**
   Border Color Definiations
   */
-  --main-border-color: var(--pastel-green);
+    --main-border-color: var(--pastel-green);
   }
 }
 
@@ -126,7 +137,7 @@ body {
   transition: color 2s, background-color 2s;
   background-color: var(--main-background-color);
   text-rendering: optimizeLegibility;
- }
+}
 
 footer {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -211,7 +222,3 @@ Main Animations
     filter: blur(0);
   }
 }
-
-
-
-

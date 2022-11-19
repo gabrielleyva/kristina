@@ -8,7 +8,7 @@ for (let i = 1; i <= 12; i++) {
 }
 
 export default {
-  name: 'Gallery',
+  name: 'GalleryCard',
   props: ['photo'],
   methods: {
     moveMouse(event) {
@@ -39,6 +39,21 @@ const update = (x, y, div) => {
 </template>
 
 <style>
+.gallery-card {
+  overflow: hidden;
+  width: 280px;
+  height: 280px;
+  transform-style: preserve-3d;
+  touch-action: none;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.2;
+}
+
 .gallery-card:not(:hover) img {
   transition: translate 1s;
 }
@@ -46,15 +61,6 @@ const update = (x, y, div) => {
 .gallery-card:hover img {
   translate:
     calc((var(--ratio-x) - 0.5) * 20%) calc((var(--ratio-y) - 0.5) * 20%);
-}
-
-.gallery-card {
-  overflow: hidden;
-  width: 280px;
-  height: 280px;
-
-  transform-style: preserve-3d;
-  touch-action: none;
 }
 
 .gallery-card:hover {
