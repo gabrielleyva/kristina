@@ -17,17 +17,18 @@ export default {
     <div class="nav-menu">
         <nav>
             <div class="menu-icon" @click="showMenu()">
-                <img src="../assets/img/menu.svg">
+                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m13 16.745c0-.414-.336-.75-.75-.75h-9.5c-.414 0-.75.336-.75.75s.336.75.75.75h9.5c.414 0 .75-.336.75-.75zm9-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm-4-5c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/>
+                </svg>
             </div>
             <div class="nav-content" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
                 <div class="initials">Kristina Ayanian</div>
                 <RouterLink class="nav-item" to="/">Home</RouterLink>
                 <RouterLink class="nav-item" to="/myStory">My Story</RouterLink>
                 <RouterLink class="nav-item" to="/gallery">Gallery</RouterLink>
-                <RouterLink class="nav-item" to="/press">Press</RouterLink>
                 <RouterLink class="nav-item" to="/philanthropy">Philanthropy</RouterLink>
+                <RouterLink class="nav-item" to="/press">Press</RouterLink>
                 <RouterLink class="nav-item" to="/contact">Contact</RouterLink>
-
             </div>
         </nav>
     </div>
@@ -49,10 +50,6 @@ Header Styles
     border-left: 1px solid var(--divider-color);
 }
 
-i {
-    display: none;
-}
-
 .closed-menu {
     opacity: 1;
 }
@@ -70,18 +67,19 @@ i {
 
 .menu-icon {
     display: none;
-    fill: green;
-}
-.menu-icon img {
-    fill: green;
 }
 
 @media screen and (max-width: 768px) {
 
     .menu-icon {
-    display: block;
-    fill: green;
-}
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-icon svg {
+        fill: var(--icon-color);
+    }
 
 
     .nav-menu nav {
@@ -119,12 +117,6 @@ i {
 
     .nav-items {
         flex-direction: column;
-    }
-
-    i {
-        display: block;
-        text-align: left;
-        padding: 0 10px 10px 0;
     }
 }
 </style>

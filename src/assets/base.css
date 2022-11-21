@@ -59,15 +59,9 @@ Main Root Configs
   --gallery-border-color: var(--platinum);
 
   /**
-  Container Dimensions Declarations
+  Icon Color Definiations
   */
-  --width: 1024px;
-
-  /**
-  Padding Declarations
-  */
-  --grid-padding: 16px;
-  --grid-width: 320px;
+  --icon-color: var(--midnight);
 }
 
 /**
@@ -119,6 +113,11 @@ Main Root Dark Mode Configs
   */
     --main-border-color: var(--pastel-green);
     --gallery-border-color: white;
+
+  /**
+  Dark Icon Color Definiations
+  */
+  --icon-color: var(--pastel-green);
   }
 }
 
