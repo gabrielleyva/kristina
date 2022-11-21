@@ -7,7 +7,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tabler/icons": "^1.112.0",
     "vue": "^3.2.41",
     "vue-router": "^4.1.5"
   },
