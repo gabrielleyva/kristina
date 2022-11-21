@@ -51,6 +51,7 @@ Main Root Configs
   --cover-imgae-position: bottom right;
   --cover-image-size: 50%;
   --cover-image-background-color: var(--solitude);
+  --contact-cover-image: url(/k-2.JPG);
 
   /**
   Border Color Definiations
@@ -107,6 +108,7 @@ Main Root Dark Mode Configs
     --cover-image-size: 60%;
     --cover-image-margin-left: 40%;
     --cover-image-background-color: var(--midnight);
+    --contact-cover-image: url(/k-3.JPG);
 
     /**
   Dark Border Color Definiations
@@ -114,10 +116,10 @@ Main Root Dark Mode Configs
     --main-border-color: var(--pastel-green);
     --gallery-border-color: white;
 
-  /**
+    /**
   Dark Icon Color Definiations
   */
-  --icon-color: var(--pastel-green);
+    --icon-color: var(--pastel-green);
   }
 }
 
@@ -230,20 +232,20 @@ Main Animations
 Tablet / Mobile
 */
 @media screen and (max-width: 768px) {
-/**
+  /**
 Main tag configs
 */
 
-h1 {
-  font-size: 50px;
-}
+  h1 {
+    font-size: 50px;
+  }
 
-h2 {
-  font-size: 32px;
-}
+  h2 {
+    font-size: 32px;
+  }
 
-p {
-  font-size: 14px;
-  line-height: 1.6;
-}
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
