@@ -52,5 +52,23 @@ export default {
 .main-story-container:nth-child(even) {
   background-color: var(--tile-background-color);
 }
+
+/**
+Tablet / Mobile
+*/
+@media screen and (max-width: 768px) {
+.my-story {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.stories-container {
+  padding-bottom: 50px;
+}
+}
 </style>
   

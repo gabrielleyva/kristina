@@ -50,4 +50,18 @@ export default {
     object-fit: cover;
 }
 
+/**
+Tablet / Mobile
+*/
+@media screen and (max-width: 768px) {
+.story {
+    max-width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.story-image-container {
+    min-width: 100px;
+}
+}
 </style>

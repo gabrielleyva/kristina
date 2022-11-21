@@ -69,4 +69,21 @@ export default {
   flex-grow: 1;
   border: 10px solid var(--gallery-border-color);
 }
+
+/**
+Tablet / Mobile
+*/
+@media screen and (max-width: 768px) {
+  .gallery {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .gallery-grid-container {
+    padding-bottom: 50px;
+  }
+}
 </style>
