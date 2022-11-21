@@ -30,6 +30,7 @@ Main Root Configs
   --tile-background-color: var(--platinum);
   --footer-background-color: var(--platinum);
   --header-background-color: white;
+  --tile2-background-color: var(--solitude);
 
   /**
   Divider Color Definitions
@@ -90,6 +91,7 @@ Main Root Dark Mode Configs
     --tile-background-color: var(--midnight);
     --footer-background-color: var(--midnight);
     --header-background-color: var(--midnight);
+    --tile2-background-color: var(--midnight);
 
     /**
   Divider Color Definitions
@@ -223,4 +225,26 @@ Main Animations
     opacity: 1;
     filter: blur(0);
   }
+}
+
+/**
+Tablet / Mobile
+*/
+@media screen and (max-width: 768px) {
+/**
+Main tag configs
+*/
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
 }

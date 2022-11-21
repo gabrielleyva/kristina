@@ -27,8 +27,8 @@ export default {
   <div class="gallery appear">
     <Title title="The Gallery"></Title>
     <div class="gallery-grid-container">
-      <div class="grid-col" v-for="photo in photos" :key="photo">
-        <GalleryCard class="grid-item" :photo="photo"></GalleryCard>
+      <div class="gallery-grid-col" v-for="photo in photos" :key="photo">
+        <GalleryCard class="gallery-grid-item" :photo="photo"></GalleryCard>
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ export default {
   row-gap: 10px;
 }
 
-.grid-col {
+.gallery-grid-col {
   display: flex;
   flex: 1;
   align-self: center;
@@ -65,7 +65,7 @@ export default {
   justify-content: center;
 }
 
-.grid-item {
+.gallery-grid-item {
   flex-grow: 1;
   border: 10px solid var(--gallery-border-color);
 }
