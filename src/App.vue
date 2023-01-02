@@ -13,7 +13,7 @@ import NavbarVue from './components/Navbar.vue';
     <RouterView />
     <footer>
         <div>
-          <div class="footer-item">Kristina Ayanian © 2022 Copyright</div>
+          <div class="footer-item">Kristina Ayanian © 2023 Copyright</div>
           <div class="footer-item">•</div>
           <div class="footer-item"> Made with love ❤️ </div>
         </div>

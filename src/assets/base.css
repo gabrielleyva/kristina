@@ -192,6 +192,16 @@ h2 {
   margin-bottom: 0;
 }
 
+h3 {
+  font-size: 28px;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--h1-color);
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 p {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--p-color);
@@ -242,6 +252,10 @@ Main tag configs
 
   h2 {
     font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 
   p {

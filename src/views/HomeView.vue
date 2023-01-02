@@ -1,4 +1,27 @@
 <template>
+    <div class="vote-section">
+        <div class="vote-for-me">
+            <h1>
+                Vote For Armenia 🇦🇲
+            </h1>
+        </div>
+        <div class="app-store-section">
+            <img class="mu-logo" src="../assets/img/mu-logo.webp">
+            <div class="app-store-logos">
+                <p><a href="https://play.google.com/store/apps/details?id=com.choicely.missuniverse&hl=en_US&gl=US">
+                        <img src="../assets/img/google-store.svg.png" alt="Google PlayStore">
+                    </a></p>
+                <p><a href="https://apps.apple.com/us/app/miss-universe/id1557255641">
+                        <img src="../assets/img/apple-store.png" alt="Apple AppStore">
+                    </a></p>
+            </div>
+        </div>
+        <div class="download">
+            <h3>
+                Download the Miss Universe App
+            </h3>
+        </div>
+    </div>
     <div class="welcome">
         <div class="welcome-card appear">
             <div class="welcom-box-info appear">
@@ -14,6 +37,48 @@
 </template>
 
 <style>
+.vote-section {
+    text-align: center;
+    width: 100vw;
+}
+
+.vote-for-me {
+    width: 1024px;
+    display: inline-block;
+    text-align: center;
+}
+
+.vote-for-me h1 {
+    text-align: center;
+}
+
+.vote-for-me img {
+    width: 100px;
+    height: auto;
+    float: left;
+}
+
+.download h3 {
+    text-align: center;
+}
+
+.app-store-section img {
+    width: 50px;
+    height: auto;
+    border-radius: 10px;
+    /* margin: 8px; */
+}
+
+.app-store-logos p {
+    display: inline;
+}
+
+.app-store-logos img {
+    width: 120px;
+    height: auto;
+    padding: 8px;
+}
+
 .welcome {
     position: relative;
     height: calc(100vh - 110px);
@@ -25,7 +90,7 @@
     width: 1024px;
     height: 500px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     margin: -250px 0 0 -512px;
 
@@ -101,6 +166,17 @@ Tablet / Mobile
 
     .subtitle-section h2 {
         display: inline-block;
+    }
+
+    .vote-section {
+        margin-top: 16px;
+    }
+    .vote-for-me {
+        width: 100vw;
+    } 
+
+    .vote-for-me h1 {
+        font-size: 28px;
     }
 }
 </style>
