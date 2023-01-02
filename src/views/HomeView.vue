@@ -39,7 +39,6 @@
 <style>
 .vote-section {
     text-align: center;
-    width: 100vw;
 }
 
 .vote-for-me {
